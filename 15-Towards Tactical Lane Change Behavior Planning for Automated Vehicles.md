@@ -17,3 +17,15 @@ Gap Quality Assessment: High traffic densities necessitate to adjust the automat
 Calculating and Propagating Uncertainties: Among the key challenges for tactical lane change behavior planning is the inherent uncertainty from any kind of environment perception modules. State estimates from perception modules come along with an uncertainty already. Based on this, hidden state variable estimates are calculated by the dynamic Bayesian network. 
 
  tree-based policy evaluation: Based on a current belief b0 at a time step t0 several actions u(i) 2 U can be executed and result in a reward r(b0; u(i)). 
+ 
+some driver might be inattentive, gradually approaches and finally crashes into the automated vehicle without reacting at all
+
+tree simplification: some actions can be ruled out because of not being allowed (changing lanes without indicating, given belief b0 represents normal driving). it is possible to prune the tree even further by ruling out actions would result in unreasonable policies. E.g., if a lane change was decided it will be an unreasonable policy to abort a lane change and reinitiate a second lane change in two consecutive time steps. This helps to reduce the tree complexity a lot. Every path to a fringe node at end of the planning horizon at time step t0 + T will be a possible -to a certain degree- reasonable policy. 
+
+actions U:  contains the 13 discrete action alternatives of DoLc, FinishLc, PrepareLc, IndicateLc and AbortLc to the left and right and action alternatives for NormalDriving, AbortLcIndication and AbortLcPreparation
+
+Situation prediction model: bel(xt+τ ) = p(bel(xt); ut). situation prediction as a whole constitutes of the prediction of several aspects of that situation. Among them are simple dynamic models for the prediction of object movements, behavior models to imitate the interaction between vehicles and simplified models to predict the ego behavior. 
+
+intelligent driver model: It is based on predicting a longitudinal acceleration and by this calculating new longitudinal velocity and position of each object based on its environment. For the lateral prediction, we assume that vehicles will maintain their lateral offset towards their lanes. 
+
+Current Limitations: The denser the traffic is, the more likely is the automated vehicle to not finding a sufficiently large gap, or to abort an already initiated lane change due to false object detections or track-to-lane associations. Also very challenging is the gap adjustment. Another limitation are currently highway interchanges and on- and off-ramps.
