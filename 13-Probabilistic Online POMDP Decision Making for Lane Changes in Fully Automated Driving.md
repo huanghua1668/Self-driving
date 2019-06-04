@@ -4,7 +4,7 @@ does not consider any direct state transitions from a lane change left toward a 
 X=[\pm LcPos, \pm LcInProg, \pm LcBen]\
 __action__\
 three actions have been modeled, regular driving (straight) ahead, initiating a lane change to the neighbor lane (InitiateLC) and aborting a lane change \
-__eward__\
+__reward__\
 elements of the reward matrix are set to...\
 __transition__\
 state transition matrix for p(x0jx; u) was initialized such that state transitions roughly fit with observed state transitions in real world driving scenarios. For the status quo the state transition matrices were set by using expert knowledge. 
