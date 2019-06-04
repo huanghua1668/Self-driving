@@ -1,6 +1,16 @@
 
-__state__
-does not consider any direct state transitions from a lane change left toward a lane change right state., POMDP model only need to have eight states:
+__state__\
+does not consider any direct state transitions from a lane change left toward a lane change right state., POMDP model only need to have eight states:\
+X=[\pm LcPos, \pm LcInProg, \pm LcBen]\
+__action__\
+three actions have been modeled, regular driving (straight) ahead, initiating a lane change to the neighbor lane (InitiateLC) and aborting a lane change \
+__eward__\
+elements of the reward matrix are set to...\
+__transition__\
+state transition matrix for p(x0jx; u) was initialized such that state transitions roughly fit with observed state transitions in real world driving scenarios. For the status quo the state transition matrices were set by using expert knowledge. 
+__evalation__\
+first step we used Virtual Test Drive (VTD)1 for a purely virtual simulation of the lane change decision situation against perfect noise free data.\
+Second step we implemented the algorithms in our research vehicle 
 
 apply an online Partially Observable Markov Decision Process (POMDP) to accommodate inevitable sensor noise to be faced in urban traffic scenarios. 
 
@@ -18,4 +28,4 @@ use a variant of Paquet et al. [20] real-time belief space search (RTBSS) approa
 
 __Modeling__\
 To get line change possibility and beneficiality: signal processing networks consider relative distances, relative velocities and time to collisions with objects around the automated vehicle.\
-X=[\pm LcPossible]
+
