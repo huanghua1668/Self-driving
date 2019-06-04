@@ -1,3 +1,19 @@
+__state__\
+mixed integer state, observation-> belief of state, X(t)={Situation, Hidden State Variable, ...}\
+observable:\
+how long the indicator has been switched in\
+hidden(distributions obtained by dynamic Bayesian network):\
+From Fig. 4, LcPos for left and right, LcBen for left and right\
+BestGap, choose from:\
+LGapQualRear2, LGapQualRear1, LGapQual0, LGapQualFront1, LGapQualFront2\
+RGapQualRear2, RGapQualRear1, RGapQual0, RGapQualFront1, RGapQualFront2\
+Details on situation assessment can be found at Situation Assessment in Tactical Lane Change Behavior Planning for
+Automated Vehicles\
+__action__\
+13 discrete action alternatives of DoLc, FinishLc, PrepareLc, IndicateLc and AbortLc to the left and right and action alternatives for NormalDriving, AbortLcIndication and AbortLcPreparation\
+__reward__\
+__model__
+
 Among tactical behavior planning tasks are decision making, whether lane changes are beneficial and possible, if a vehicle should execute some cooperative driving behavior, or particular maneuvers in intersection handling. 
 
 Whether a lane change is possible depends on the relative distances, velocities and accelerations of other vehicles around the ego vehicle. Whether a lane change is beneficial depends on the road network, the mission and the behavior of other vehicles around the ego vehicle.
@@ -21,8 +37,6 @@ Calculating and Propagating Uncertainties: Among the key challenges for tactical
 some driver might be inattentive, gradually approaches and finally crashes into the automated vehicle without reacting at all
 
 tree simplification: some actions can be ruled out because of not being allowed (changing lanes without indicating, given belief b0 represents normal driving). it is possible to prune the tree even further by ruling out actions would result in unreasonable policies. E.g., if a lane change was decided it will be an unreasonable policy to abort a lane change and reinitiate a second lane change in two consecutive time steps. This helps to reduce the tree complexity a lot. Every path to a fringe node at end of the planning horizon at time step t0 + T will be a possible -to a certain degree- reasonable policy. 
-
-actions U:  contains the 13 discrete action alternatives of DoLc, FinishLc, PrepareLc, IndicateLc and AbortLc to the left and right and action alternatives for NormalDriving, AbortLcIndication and AbortLcPreparation
 
 Situation prediction model: bel(xt+τ ) = p(bel(xt); ut). situation prediction as a whole constitutes of the prediction of several aspects of that situation. Among them are simple dynamic models for the prediction of object movements, behavior models to imitate the interaction between vehicles and simplified models to predict the ego behavior. 
 
