@@ -12,7 +12,7 @@ Automated Vehicles\
 __action__\
 13 discrete action alternatives of DoLc, FinishLc, PrepareLc, IndicateLc and AbortLc to the left and right and action alternatives for NormalDriving, AbortLcIndication and AbortLcPreparation\
 __reward__\
-reward r(bel(xt); ut) return a vector. Thus, the decision making algorithm may distinguish if a positive overall reward results from whether a lane change is possible and/or beneficial.
+reward r(bel(xt); ut) return a vector. Thus, the decision making algorithm may distinguish if a positive overall reward results from whether a lane change is possible and/or beneficial.\
 __Planning__\
 For example, model that cooperative breaking intensities of traffic participants vary by a probability distribution, but not that some driver might be inattentive, gradually approaches and finally crashes into the automated vehicle without reacting at all. \
 __transition__\
@@ -21,7 +21,7 @@ use an improved intelligent driver model as in Shen et al. It is based on predic
 __evaluation__\
 1st: use a tool chain of Virtual Test Drive (VTD)1 and Automotive Data and Time-triggered Framework (ADTF)2 to test the
 presented algorithms\
-2nd real trafic
+2nd real trafic\
 __run time__\
 on an Intel i7 4800MQ CPU sharing resources with trajectory planning, situation modeling and visualization modules, At worst, the number of evaluated pathes will grow to 200 and it will still take less than in peak 4 ms to evaluate them.
 
