@@ -27,5 +27,5 @@ apply an online decision making algorithm to avoid the complexity of computing a
 use a variant of Paquet et al. [20] real-time belief space search (RTBSS) approach. we use a blind policy (BP) [22], [23] to obtain a lower bound for V ∗(x) and the QMDP algorithm [24] to obtain an upper bound for V ∗(x). A blind policy is a policy, where the same action is always executed regardless of the belief state.  Our blind policy for initiating/aborting a lane change will only initiate/abort one lane change; only the drive ahead-policy is a regular blind policy. After calculating a lower and upper bound for a specific belief state, Branch-and-Bound tree search is executed on the so called policy tree. goal is to find that particular action that will result in the highest expected overall reward for the current belief state b0. 
 
 __Modeling__\
-To get line change possibility and beneficiality: signal processing networks consider relative distances, relative velocities and time to collisions with objects around the automated vehicle.\
+To get line change possibility and beneficiality: signal processing networks consider relative distances, relative velocities and time to collisions with objects around the automated vehicle.
 
