@@ -12,7 +12,16 @@ Automated Vehicles\
 __action__\
 13 discrete action alternatives of DoLc, FinishLc, PrepareLc, IndicateLc and AbortLc to the left and right and action alternatives for NormalDriving, AbortLcIndication and AbortLcPreparation\
 __reward__\
-__model__
+__Planning__\
+For example, model that cooperative breaking intensities of traffic participants vary by a probability distribution, but not that some driver might be inattentive, gradually approaches and finally crashes into the automated vehicle without reacting at all. 
+
+__transition__\
+bel(xt+τ ) = p(bel(xt); ut). The situation prediction as a whole constitutes of the prediction of several aspects of that situation. Among them are simple dynamic models for the prediction of object movements, behavior models to imitate the interaction between vehicles and simplified models to predict the ego behavior.\
+use an improved intelligent driver model as in Shen et al. It is based on predicting a longitudinal acceleration ad by this calculating new longitudinal velocity and position
+ o ach object based on its environment. For the lateral
+prediction, we assume that vehicles will maintain their lateral
+offset towards their lanes.
+__evaluation__\
 
 Among tactical behavior planning tasks are decision making, whether lane changes are beneficial and possible, if a vehicle should execute some cooperative driving behavior, or particular maneuvers in intersection handling. 
 
