@@ -17,10 +17,7 @@ For example, model that cooperative breaking intensities of traffic participants
 
 __transition__\
 bel(xt+τ ) = p(bel(xt); ut). The situation prediction as a whole constitutes of the prediction of several aspects of that situation. Among them are simple dynamic models for the prediction of object movements, behavior models to imitate the interaction between vehicles and simplified models to predict the ego behavior.\
-use an improved intelligent driver model as in Shen et al. It is based on predicting a longitudinal acceleration ad by this calculating new longitudinal velocity and position
- o ach object based on its environment. For the lateral
-prediction, we assume that vehicles will maintain their lateral
-offset towards their lanes.
+use an improved intelligent driver model as in Shen et al. It is based on predicting a longitudinal acceleration and by this calculating new longitudinal velocity and position of each object based on its environment. For the lateral prediction, we assume that vehicles will maintain their lateral ffset towards their lanes.
 __evaluation__\
 
 Among tactical behavior planning tasks are decision making, whether lane changes are beneficial and possible, if a vehicle should execute some cooperative driving behavior, or particular maneuvers in intersection handling. 
