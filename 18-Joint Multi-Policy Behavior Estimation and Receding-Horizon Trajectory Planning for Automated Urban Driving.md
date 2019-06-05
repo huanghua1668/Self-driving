@@ -3,8 +3,11 @@ ego: $\bm{z}^0={x,y,\theta, \delta, v}$, in which $\delta$ is teering angle, obs
 __action__\
 $a={u^\delta, u^a}$, in which $u^\delta$ is steering speed, and $u^a$ is throttle\
 __transition__\
-trajectories of vehicle $i$ for time horizon $[0, m]$ is $\pi_i(g_j)=\{s_0^i, s_1^i,..., s_m^i\}$, in which $s=\{x, y\}$ is vehicle position. For vehicle $i\in\{1,...,n\}$ define all possible motion policies(under all motion intentions) by $\pi_i={\pi_i(g_1),...,\pi_i(g_l)}$, and their relative weights or likelihood by $p^i=[p_1^i,...,p_l^i]$.
-
+trajectories of vehicle $i$ for time horizon $[0, m]$ is $\pi_i(g_j)=\{s_0^i, s_1^i,..., s_m^i\}$, in which $s=\{x, y\}$ is vehicle position. For vehicle $i\in\{1,...,n\}$ define all possible motion policies(under all motion intentions) by $\pi_i={\pi_i(g_1),...,\pi_i(g_l)}$, and their relative weights or likelihood by $p^i=[p_1^i,...,p_l^i]$.\
+ego state transition: directly from motion planner\
+obstacles: obtained from differential driving model, in which $a\in[Acceleration, Deceleration, Maintain]$, and $\Delta \theta$ computed by tracking reference road path
+__reward__\
+The reward function is chosen based on driving experience and aims to let the obstacle vehicle take maximum progress on the road while avoiding the collision with others. $R(z, a) = Rp(z) + Rc(z, a) + Ra(a)$, in whic award progress, penalize collision, and penalize accelerate and decellerate
 
 The method leverages Partially Observable Markov Decision Processes to estimate the behavior of other traffic participants given the planned trajectory for the ego-vehicle, and Receding-Horizon Control for generating safe trajectories for the ego-vehicle. To achieve safe navigation we introduce chance constraints over multiple motion policies in the recedinghorizon planner. These constraints account for uncertainty over the behavior of other traffic participants.
 
