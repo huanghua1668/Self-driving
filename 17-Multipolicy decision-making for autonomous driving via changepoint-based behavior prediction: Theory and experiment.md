@@ -1,13 +1,13 @@
 __state__\
 a state x_t^v is a tuple of the pose, velocity, and acceleration\
 __obervation__\
-a tuple including the observed poses and velocities of nearby vehicles and an occupancy grid of static obstacles.
+a tuple including the observed poses and velocities of nearby vehicles and an occupancy grid of static obstacles.\
 __action__\
 tuple of controls for steering, throttle, brake, shifter, and turn signals.\
 __transition__\
-driver model: D(x, z ,a)=p(a|x, z)
+driver model: D(x, z ,a)=p(a|x, z)\
 __reward__\
-use a straightforward set of metrics in this scenario to compose the reward function with empirically tuned weights. Distance to goal, Lane bias, Maximum yaw rate, Dead end distance
+use a straightforward set of metrics in this scenario to compose the reward function with empirically tuned weights. Distance to goal, Lane bias, Maximum yaw rate, Dead end distance\
 __POMDP simplification__\
 approach is made tractable by considering only a finite set of a priori known policies (as illustrated in Fig. 1). Each policy is designed to capture a different high-level behavior, such as following a lane, changing lanes, or turning at an intersection.
 
