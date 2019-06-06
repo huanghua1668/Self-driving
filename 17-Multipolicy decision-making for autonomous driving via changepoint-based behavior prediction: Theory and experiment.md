@@ -6,9 +6,12 @@ __action__\
 tuple of controls for steering, throttle, brake, shifter, and turn signals.\
 __transition__\
 driver model: D(x, z ,a)=p(a|x, z)
-
+__reward__\
+use a straightforward set of metrics in this scenario to compose the reward function with empirically tuned weights. Distance to goal, Lane bias, Maximum yaw rate, Dead end distance
 __POMDP simplification__\
 approach is made tractable by considering only a finite set of a priori known policies (as illustrated in Fig. 1). Each policy is designed to capture a different high-level behavior, such as following a lane, changing lanes, or turning at an intersection.
+
+__frequency of policy selection__ 1hz
 
 an integrated inference and decision-making approach for autonomous driving that models vehicle behavior for both our vehicle and nearby vehicles as a discrete set of closed-loop policies. Each policy captures a distinct high-level behavior and intention, such as driving along a lane or turning at an intersection. We first employ Bayesian changepoint detection on the observed history of nearby cars to estimate the distribution over potential policies that each nearby car might be executing. We then sample policy assignments from these distributions to obtain high-likelihood actions for each participating vehicle, and perform closed-loop forward simulation to predict the outcome for each sampled policy assignment. After evaluating these predicted outcomes, we execute the policy with the maximum expected reward value. 
 
