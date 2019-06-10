@@ -20,5 +20,13 @@ the gap selection module is still working as a safety guard during the whole lan
 
 the lateral control in a lane changing process is of crucial importance since a slightly fallacious shift in steering may result in the vehicle drifting out of the lane or a significant disturbance of surrounding vehicles. 
 
+To make sure that the steering angle input is continuous and smooth, there should be no abrupt change in yaw rate or, in other words, the yaw acceleration does not fluctuate erratically. Thereby, we design the RL agent to learn the yaw acceleration, i.e., the action space is defined with vehicle yaw acceleration 
 
+state space\
+s=(v, a, x, y, \theta, id, w, c)
 
+safety, smoothness and efficiency of the maneuver. As the longitudinal module and the gap selection module have taken into account the safety concerns, smoothness and efficiency are considered by the lateral controller through the reward function. The components in the reward function are selected based on the most relevant variables to the action performance, and their weights are decided by trying different sets of parameters.
+
+the smoothness is evaluated by yaw acceleration. Another indicator of smoothness is the yaw rate. The efficiency is assessed by the lane changing time consumed to complete the maneuver. 
+
+we design a Q-function which is quadratic in action so that the greedy action has a closed-form solution. 
