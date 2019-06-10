@@ -20,3 +20,5 @@ the gap selection module is still working as a safety guard during the whole lan
 
 the lateral control in a lane changing process is of crucial importance since a slightly fallacious shift in steering may result in the vehicle drifting out of the lane or a significant disturbance of surrounding vehicles. 
 
+
+automated lane changing maneuvers has been extensively conducted and the work can broadly be divided into two functional categories: a decision-making module and a control execution module [3]. A decisionmaking module can be viewed as a strategic or tactical level function which issues a lane change command based on a planned route (e.g. exit the highway from an off-ramp forward) or a desired driving condition (e.g. drive at high speed by passing a slow vehicle in front). When a lane change command is given, the ego vehicle (i.e. lane changing vehicle) performs operational control to coordinate the longitudinal and lateral movements for a safe, smooth and efficient lane change maneuver.
