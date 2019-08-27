@@ -1,0 +1,5 @@
+Analyzing the surrounding vehicles’ mutual effects from their trajectories. 2) Estimating the proper lane change start point and end point according to the analysis of surrounding vehicles. We propose a learning-based approach to understand surrounding traffic and make decisions for a safe lane change
+
+ Takes past trajectories of all related surrounding cars as input to capture mutual interactions and output continuous values to represent behaviors.
+ 
+ the proposed approach is able to generate feasible and human-like lane-change behavior (represented by start and end points) in multi-car environments.
