@@ -1,0 +1,42 @@
+ __understand and estimate other vehicles’ behavior 
+ behave like a human driver to interact with other vehicles__
+ 
+Game theory constructs mathematical models to deal with the conflict and cooperation between decision makers. The drivers’ decisions converge to the equilibrium of a set of strategies to maximize their rewards together in an independent game. 
+ 
+This model defined three strategies (change, wait, overtake) for the subject vehicle and two strategies (yield, block) for the lag vehicle. 
+
+the most difficult part of the game theoretical methods is the formulation of the payoff function of the strategies for each game-player
+
+A twoperson non-zero-sum non-cooperative game under complete information is presented to model the decision making behavior in highway driving. 
+
+main contribution of this paper is that we have built a neural-network based payoff model to describe the rewards of each driver and calibrate the model using real traffic data.
+
+a game has three important factors: game players, strategies for each player and a payoff model representing the reward for different strategies combination of each player. 
+
+non-zero-sum is that the sum of their payoffs in the game is not zero, because the payoffs of the two players are independent. Non-cooperative game means that players choose their strategies independently and no communication is established. It is assumed that the two players know the possible strategies of each other and the states of the surrounding vehicles. In another word, this game 
+
+Nash equilibrium is a solution concept of a non-cooperative game involving two or more players in which each player is assumed to know the equilibrium strategies of others, and no player has anything to gain by changing only his or her own strategy. The Nash equilibrium has two types: the pure strategies and the mixed strategies. The players select the pure strategies if Nash equilibrium of the pure strategies exists. It implies that one player maximizes his or her own reward considering that the opposite player also wants to maximize his or her reward.
+
+Nash equilibrium of pure strategy set dose not always exist and the mixed strategy set can be used instead. A set of probabilities for each player’s strategies are used to maximize his or her own payoff according to the set of probabilities selected by the opposite player. Thus, the Nash equilibrium of pure strategy is a special mixed strategy where the probability of a strategy is 1 for each player.
+
+The input layer xin is denoted by: xin = [∆v3;i; ∆y3;i; ∆x3;i; v3] ; i = 1; 2; 4 (2) where ∆v3;i, ∆y3;i and ∆x3;i are respectively the relative speed, longitudinal gap and lateral gap between the subject vehicle and the other three surrounding vehicles, and v3 is the speed of the subject vehicle.
+
+After the neural network based payoff function is built, the real traffic data is then used to estimate the parameters in this model and validated in the next section.
+
+segmented scenarios:
+In each scenario, the subject vehicle and the lag vehicle remain the same.
+• This work sets the relative longitudinal distance to 100 m, the relative lateral distance to 10 m and the relative speed to 0 for any of the surrounding vehicles that does not exist.
+• A scenario ends when the subject vehicle crosses the lane marker, passes V2, or yields to V1.
+• A new scenario restarts immediately after an ending of last scenario to ensure no gaps between driving
+scenarios.
+• The segmented scenarios last at least two seconds to ensure a relatively complete lane change or lane keeping
+behavior.
+The average duration of each scenario segmentation is about five seconds. The highly imbalanced data, i.e., much higher proportion of pass or yield scenarios than lane-changing scenarios, pose another significant challenge to the behavior recognition. 
+
+two __main difficult problems in the data scenario extractionthe__ 
+1st: definition of the exact time at which a driver makes a decision (the time at which the driver turns on the turn signal light in lane change scenario)
+2nd: classification of the strategy chosen by the lag vehicle in lane change scenarios. The general method uses average acceleration as a threshold. However, the acceleration changes frequently and has a large disturbance of measurement. Kang [10] used the longitudinal distance as the classification standard for strategy of the lag vehicle. a cooperate scenario is given in Fig. 4(a) and Fig. 4(b), the longitudinal distance increases obviously when the subject vehicle changes the lane. The example of a compete scenario is shown in Fig. 4(c) and Fig. 4(d) where the longitudinal distance decreases when the subject vehicle changes the lane
+
+80% of the data (240 segmentations of each type) are used to calibrate the payoff function and the remaining 20% (60 segmentations of each type) are used to validate the model.
+
+it is more difficult to predict the strategy of the lag vehicle.
