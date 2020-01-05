@@ -1,0 +1,1 @@
+Motion forecasting experiments ranging in complexity from classical methods (k-NN) to LSTMs demonstrate that using detailed “vector maps” with lane-level information substantially reduces prediction error.
