@@ -1,0 +1,3 @@
+when being driven, there is a notable difference between having a non-experienced vs. an experienced driver. One may get the feeling, that the latter one anticipates what may happen in the next few moments and considers these foresights in his driving behavior. To make the driving style of automated vehicles comparable to a human driver in the sense of comfort and perceived safety, the aforementioned anticipation skills need to become a built-in feature of self-driving vehicles. 
+
+integrating contextual knowledge (e. g. weather, traffic, time of day, local specialties) into our models. First experiments prove, that these contextual properties can have a considerable impact on driving behavior.
