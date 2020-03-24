@@ -8,8 +8,6 @@ complex scenarios, such as intersections, ramp-merging and lane changes, which i
 
 understanding intentions by a collection of related traffic participants’ past trajectories; and generating a proper start point and an end point for lane changing.
 
-understanding intentions by a collection of related traffic participants’ past trajectories; and generating a proper start point and an end point for lane changing.
-
 We extracted 543 lane changing scenarios from the US-101 and I-80 data. At most five surrounding cars and six trajectories are considered: five from surrounding cars and one from the host car itself
 
 450 groups of trajectories are randomly selected as training sets, and the remaining 93 groups are used for testing. To concentrate on the recent past, training trajectories are pruned and only retain the last 30 steps (3 seconds) before the host vehicle starts the lane-change 
