@@ -22,7 +22,7 @@ each speed has specific transition probabilities under different intention. Thos
 
 reacting to merging vehicles
 
-There are 354 pairs of merging-host pairs in US-101, and 452 pairs in I-80
+There are 354 pairs of merging-host pairs in US-101, and 452 pairs in I-80 
 
 The host car uses PGM for intention estimation and ACC for distance keeping [12], and we apply real trajectories to the merging cars. In a given test, the merge car replays a real trajectory from the dataset, and the host vehicle’s start position and speed are also taken from the dataset. We then run our proposed PGM method to estimate intention of the merging car and apply the LQR control model.
 The merging car replays the log in the dataset
