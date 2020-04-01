@@ -9,6 +9,10 @@ If the anticipated gap is unacceptable, the driver decides whether to force his 
 
 observed lane change (or no change) action at any time instant can be the result of many possible decision sequences that are unobserved.
 
+Aggressive and timid drivers can thus have different critical gaps
+
+traffic conditions (e.g. average speed and density)
+
 explicitly consider the anticipatory aspect of cooperation among drivers and aggressive merges by impatient drivers. 
 
 decision of the lag driver (whether or not to provide courtesy to the merging driver) 
